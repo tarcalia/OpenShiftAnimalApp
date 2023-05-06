@@ -19,7 +19,6 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.apache.maven.version>3.2.0</org.apache.maven.version>
         <com.github.javafaker.version>1.0.2</com.github.javafaker.version>
     </properties>
 
@@ -43,14 +42,6 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>${org.apache.maven.version}</version>
-                <configuration>
-                    <finalName>app</finalName>
                 </configuration>
             </plugin>
             <plugin>

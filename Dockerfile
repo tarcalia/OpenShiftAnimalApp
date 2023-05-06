@@ -1,4 +1,4 @@
 FROM openjdk:21
-WORKDIR /app
-COPY target/app.jar /app
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
 CMD ["java", "-jar", "app.jar"]
