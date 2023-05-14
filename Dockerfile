@@ -20,7 +20,7 @@ FROM adoptopenjdk:11-jre-hotspot-bionic
 WORKDIR /app
 
 # Copy the packaged JAR file from the build image to the container
-COPY --from=build /app/target/my-application.jar .
+COPY --from=build /app/target/animal-1.0.0.jar .
 
 # Expose port 8080 for the application
 EXPOSE 8080
