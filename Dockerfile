@@ -1,4 +1,4 @@
-FROM maven:3.8.1-openjdk-17-slim AS build
+FROM maven:3-amazoncorretto-19 AS build
 WORKDIR /app
 
 # Copy the pom.xml file to the container
