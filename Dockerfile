@@ -14,7 +14,7 @@ COPY . .
 RUN mvn package -DskipTests
 
 # Use a lightweight image of the JRE as the base image
-FROM adoptopenjdk:11-jre-hotspot-bionic
+FROM amazoncorretto:17.0.5
 
 # Set the working directory to /app
 WORKDIR /app
@@ -26,7 +26,7 @@ COPY --from=build /app/target/animal-1.0.0.jar .
 EXPOSE 8080
 
 # Run the application
-CMD ["java", "-jar", "my-application.jar"]
+CMD ["java", "-jar", "animal-1.0.0.jar"]
 
 #FROM openjdk:21
 #ARG JAR_FILE=target/*.jar
